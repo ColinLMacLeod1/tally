@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const config = {
   entry: [
-    './app/routes.js'
+    './app/routes/routes.js'
   ],
   output: {
     path: path.resolve(__dirname, "dist"),

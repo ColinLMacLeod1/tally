@@ -27,4 +27,4 @@ var routes = (
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
-render(routes, document.getElementById('root'));
+render(routes, document.getElementById('app'));
