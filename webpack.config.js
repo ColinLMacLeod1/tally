@@ -15,7 +15,7 @@ const config = {
     rules: [
       {test: /\.jsx?$/, use: {loader: 'babel-loader', options: {presets: ["react", "es2015"], plugins: ["transform-es2015-arrow-functions"]}}, exclude: [/node_modules/, /dist/]},
       {test: /\.css$/, use:['style-loader','css-loader']},
-			{test: /\.(scss|sass)$/, use: ['style-loader', 'css-loader','sass-loader']},
+			{test: /\.(scss|sass)$/, use: ['style-loader', 'css-loader',{loader: 'sass-loader', options: {includePaths: ["C:/Users/Colin/Documents/Web/tally/node_modules/normalize-scss/sass"]}}]},
 			{test: /\.(woff2?|jpe?g|png|gif|ico)$/, use: 'file-loader?name=./assets/images/[name].[ext]' },
 			{test: /\.(eot|svg|ttf|woff|woff2)$/, use: 'file-loader?name=./assets/fonts/[name].[ext]' }
     ]
