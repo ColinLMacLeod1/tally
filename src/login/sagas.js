@@ -33,11 +33,16 @@ function* logout() {
 function* loginFlow(email, password) {
 	let token
 	try {
-		token = yield call(loginApi, email, password)
+		token = {
+			id: 'iABHwh3hXLqBKFsMyNDjJFWEuBYBUIQsuIV2rvI3m6p99BjWnHKZHRyx6x75fDhO',
+			ttl: 1209600,
+			created: '2018-07-06T20:11:24.577Z',
+			userId: 1,
+		} //yield call(loginApi, email, password)
 		yield put(setClient(token))
 		yield put({ type: LOGIN_SUCCESS })
 		localStorage.setItem('token', JSON.stringify(token))
-		history.push('/widgets')
+		history.push('/tally')
 	} catch (error) {
 		yield put({ type: LOGIN_ERROR, error })
 	} finally {

@@ -9,7 +9,7 @@ import history from './history'
 import App from './App'
 import Login from './login'
 import Signup from './signup'
-import Widgets from './widgets'
+import Tally from './tally'
 import './index.css'
 import registerServiceWorker from './registerServiceWorker'
 
@@ -46,7 +46,7 @@ ReactDOM.render(
 						path="/"
 						render={() =>
 							checkAuthorization(store.dispatch) ? (
-								<Redirect to={{ pathname: 'widgets' }} />
+								<Redirect to={{ pathname: 'tally' }} />
 							) : (
 								<Redirect to={{ pathname: 'login' }} />
 							)
@@ -55,10 +55,10 @@ ReactDOM.render(
 					<Route path="/login" component={Login} />
 					<Route path="/signup" component={Signup} />
 					<Route
-						path="/widgets"
+						path="/tally"
 						render={() =>
 							checkAuthorization(store.dispatch) ? (
-								<Widgets />
+								<Tally />
 							) : (
 								<Redirect to={{ pathname: 'login' }} />
 							)

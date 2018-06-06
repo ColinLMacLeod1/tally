@@ -20,7 +20,7 @@ export function checkAuthorization(dispatch) {
 export function checkIndexAuthorization({ dispatch }) {
 	return (nextState, replace, next) => {
 		if (checkAuthorization(dispatch)) {
-			replace('widgets')
+			replace('tally')
 			return next()
 		}
 		replace('login')
